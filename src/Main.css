@@ -1,0 +1,204 @@
+@charset 'utf -8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;900&family=Noto+Sans:wght@700&display=swap');
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+}
+body {
+  overflow-x: hidden;
+  color: rgb(29, 29, 31);
+  letter-spacing: -0.05em;
+  background-color: white;
+}
+p {
+  line-height: 1.6;
+}
+a {
+  color: rgb(29, 29, 31);
+  text-decoration: none;
+}
+
+.global-nav {
+  height: 44px;
+  padding: 0 1rem;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  
+}
+.local-nav {
+  height: 52px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 1rem;
+  position: absolute;
+  width: 100%;
+  top: 45px;
+  left: 0;
+}
+.global-nav-links, .local-nav-links {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  height: 100%;
+}
+.global-nav-links {
+  justify-content: space-between;
+}
+
+.local-nav-links .my-name {
+  margin-right: auto;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.local-nav-links a{
+  font-size: 0.8rem;
+}
+.local-nav-links a:not(.my-name) {
+  margin-left: 2em;
+}
+.scroll-section {
+  padding-top: 50vh;
+}
+#scroll-section-0 h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+.main-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 35vh;
+  height: 3em;
+  font-size: 2.3rem;
+  margin: 5px 0;
+  /* opacity를 주지 않으면 display:none 상태에서 block으로 넘어가는 과정에서 잠시 깜빡하면사 화면에 표시되는 문제기 있음. */
+  opacity: 0;
+}
+
+.main-message p {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+}
+.main-message small {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+#scroll-section-2 .main-message {
+  font-size: 3.5rem;
+}
+.description {
+  font-size: 1.2rem;
+  color: #888;
+  padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.description strong{
+  float: left;
+  margin-right: 0.2em;
+  font-size: 3rem;
+  color: rgb(29, 29, 31)
+}
+.desc-message {
+  width: 50%;
+  font-weight: bold;
+}
+.highlight {
+  font-size: 1.2em;
+  color: orangered;
+}
+.pin {
+  width: 1px;
+  height: 100px;
+  background: black;
+}
+#scroll-section-2 .b {
+  top: 10%;
+  left: 40%;
+}
+#scroll-section-2 .c {
+  top: 15%;
+  left: 45%;
+}
+.mid-message {
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: #888;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.mid-message strong {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  color: rgb(29, 29, 31);
+}
+.canvas-caption {
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: #888;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  background-color: skyblue;
+}
+.sticky-elem {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  #scroll-section-0 h1 {
+    font-size: 9vw;
+  }
+  .main-message {
+    font-size: 4vw;
+  }
+  .description {
+    font-size: 2rem;
+  }
+  .description strong {
+    font-size: 6rem;
+  }
+  #scroll-section-2 .main-message {
+    font-size: 6vw;
+
+  }
+  .main-message small {
+    font-size: 1.5vw;
+  }
+  .desc-message {
+    width: 20%;
+  }
+  #scroll-section-2 .b {
+    top: 20%;
+    left: 53%;
+  }
+  #scroll-section-2 .c {
+    left: 55%;
+  }
+  .mid-message {
+    font-size: 4vw;
+  }
+  .canvas-caption {
+    font-size: 2rem;
+  }
+}
